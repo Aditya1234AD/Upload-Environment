@@ -1,0 +1,16 @@
+﻿<h2>Client Dashboard</h2>
+<form action="/client/upload" method="POST"
+enctype="multipart/form-data">
+  <input name="name" placeholder="Your Name" required />
+  <input name="village" placeholder="Village" required />
+  <input name="district" placeholder="District" required />
+  <input type="file" name="photo" required />
+  <button>Upload</button>
+</form>
+<% if (user.photo) { %>
+  <h3>Your Uploaded Info</h3>
+  <img src="/uploads/<%= user.photo %>" width="100" />
+  <p>Name: <%= user.details.name %></p>
+  <p>Village: <%= user.details.village %></p>
+  <p>District: <%= user.details.district %></p>
+<% } %>
