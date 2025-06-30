@@ -23,7 +23,7 @@ app.use(session({
 }));
 app.set('view engine', 'ejs');
 // Routes
-app.use('/', authRoutes);
+app.use('/auth', authRoutes);
 app.use('/client', clientRoutes);
 app.use('/admin', adminRoutes);
 app.use('uploads',
