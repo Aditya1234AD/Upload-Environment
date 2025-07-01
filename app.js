@@ -6,7 +6,7 @@ const path = require('path');
 const authRoutes = require('./authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const adminRoutes = require('./routes/adminRoutes');
-const authMiddleware = require('../middleware/authMiddleware');
+const authMiddleware = require('./middleware/authMiddleware');
 const app = express();
 // DB connection
 mongoose.connect('mongodb://localhost:27017/userUploads');
