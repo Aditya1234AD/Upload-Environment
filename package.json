@@ -16,11 +16,11 @@
   "dependencies": {
   "ejs": "^3.1.10",
   "express": "^5.1.0",
+    "bcryptjs": "^2.4.3",
   "mongoos": "^0.0.1-security",
   "mongoose": "^8.16.0",
   "multer": "^2.0.1",
   "express-session": "^1.17.3",
   "connect-mongo": "^4.6.0"
-    "bcryptjs": "^2.4.3"
   }
 }
