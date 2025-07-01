@@ -19,7 +19,7 @@ app.use(session({
     saveUninitialized: false,
     store: MongoStore.create({
         mongoUrl:
-            "mongodb+srv://AD123:<db_password>@cluster0.kx2yqsx.mongodb.net/";
+            "mongodb+srv://AD123:<db_password>@cluster0.kx2yqsx.mongodb.net/"
     })
 }));
 app.set('view engine', 'ejs');
