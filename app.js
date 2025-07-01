@@ -7,7 +7,6 @@ const authRoutes = require('./authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const authMiddleware = require('./middleware/authMiddleware');
-const mongoose = require("mongoose");
 const app = express();
 // DB connection
 mongoose.connect(process.env.MONGO_URI)
