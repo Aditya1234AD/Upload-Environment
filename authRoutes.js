@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
-const User = require('./.vscode/client-management/models/User');
+const User = require('./models/User');
 // Register
 router.get('/', (req, res) => {
     res.render('register');
