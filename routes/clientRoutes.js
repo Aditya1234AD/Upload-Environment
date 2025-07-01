@@ -1,9 +1,8 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const { isAuthenticated } =
-    require('../.vscode/client-management/middleware/authMiddleware');
-const User = require('../.vscode/client-management/models/User');
+const { isAuthenticated } = require('../middleware/authMiddleware');
+const User = require('./models/User');
 const router = express.Router();
 const storage = multer.diskStorage({
     destination: (req, file, cb) => cb(null, 'public/uploads/'),
