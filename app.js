@@ -9,7 +9,7 @@ const adminRoutes = require('./routes/adminRoutes');
 const authMiddleware = require('./middleware/authMiddleware');
 const app = express();
 // DB connection
-mongoose.connect('mongodb://localhost:27017/userUploads');
+mongoose.connect("mongodb+srv://AD123:<db_password>@cluster0.kx2yqsx.mongodb.net/");
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -19,7 +19,7 @@ app.use(session({
     saveUninitialized: false,
     store: MongoStore.create({
         mongoUrl:
-            'mongodb://localhost:27017/userUploads'
+            "mongodb+srv://AD123:<db_password>@cluster0.kx2yqsx.mongodb.net/";
     })
 }));
 app.set('view engine', 'ejs');
