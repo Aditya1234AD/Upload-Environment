@@ -7,9 +7,12 @@ const authRoutes = require('./authRoutes');
 const clientRoutes = require('./routes/clientRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const authMiddleware = require('./middleware/authMiddleware');
+const mongoose = require("mongoose");
 const app = express();
 // DB connection
-mongoose.connect("mongodb+srv://AD123:<db_password>@cluster0.kx2yqsx.mongodb.net/");
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
